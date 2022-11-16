@@ -1,0 +1,16 @@
+repos:
+-    repo: https://github.com/pre-commit/pre-commit-hooks
+     rev: v2.3.0
+     hooks:
+     -   id: check-yaml
+     -   id: end-of-file-fixer
+     -   id: trailing-whitespace
+         exclude: .md$
+-   repo: local
+    hooks:
+    -   id: eslint
+        name: eslint
+        entry: npx eslint
+        language: system
+        types: [javascript]
+        require_serial: true
